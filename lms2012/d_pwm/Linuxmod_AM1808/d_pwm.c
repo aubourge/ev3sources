@@ -3854,7 +3854,7 @@ static    irqreturn_t IntD (int irq, void * dev)
  *      - Large Motor
  *        - Maximum speed of the Large motor is approximately 2mS per tacho pulse (low + high period)
  *          resulting in minimum timer value of: 2mS / (1/(33MHz / 256)) = 256 T64 timer ticks.
- *          Because 1 sample is based on only half a period minimum speed is 256/2 = 128.
+ *          Because 1 sample is based on only half a period maximum speed is 256/2 = 128.
  *        - Minimum speed of the large motor is a factor of 100 less than max. speed
  *          max. speed timer ticks * 100 => 256 * 100 = 25600 T64 timer ticks
  *          Because 1 sample is based on only half a period minimum speed is 25600/2 = 12800.
@@ -3863,7 +3863,7 @@ static    irqreturn_t IntD (int irq, void * dev)
  *      - Medium Motor
  *        - Maximum speed of the medium motor is approximately 1,25mS per tacho pulse (low + high period)
  *          resulting in minimum timer value og: 1,25mS / (1/(33MHz / 256)) = 162 (approximately)
- *          Because 1 sample is based on only half a period minimum speed is 162/2 = 81.
+ *          Because 1 sample is based on only half a period maximum speed is 162/2 = 81.
  *        - Minimum speed of the medium motor is a factor of 100 less than max. speed
  *          max. speed timer ticks * 100 => 162 * 100 = 16200 T64 timer ticks
  *          Because 1 sample is based on only half a period minimum speed is 16200/2 = 8100.
